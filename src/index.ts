@@ -1,3 +1,8 @@
-const ts = "TypeScript init";
+import { prompt } from "./prompts";
 
-console.log(ts);
+const main = async () => {
+  const res = prompt();
+  console.log(res);
+};
+
+main();
