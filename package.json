@@ -1,0 +1,8 @@
+{
+  "name": "my-node-setup-next",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mouse484/my-node-setup-next.git",
+  "author": "mouse_484 <escmouse484@gmail.com>",
+  "license": "MIT"
+}
