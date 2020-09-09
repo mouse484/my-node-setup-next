@@ -9,12 +9,21 @@ const getGitUserDate = async () =>
     user: { name?: string };
   };
 
+export type PromptAnsers = {
+  name: string;
+  description: string;
+  author: string;
+  type: string;
+  typescript: boolean;
+  lint: "eslint" | "prettier"[];
+};
+
 export const prompt = async () => {
   const rootPath = process.cwd();
   const defaultProjectName = process.argv[2] || basename(rootPath);
   const { user } = await getGitUserDate();
 
-  const response = await prompts([
+  const response: PromptAnsers = await prompts([
     {
       name: "name",
       message: "Project name.",

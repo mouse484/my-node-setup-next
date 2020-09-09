@@ -1,8 +1,10 @@
 import { prompt } from "./prompt";
+import { generator } from "./generator";
 
 const main = async () => {
-  const res = prompt();
-  console.log(res);
+  const promptAnswers = await prompt();
+  console.log(promptAnswers);
+  generator(promptAnswers);
 };
 
 main();
