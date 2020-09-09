@@ -1,4 +1,4 @@
-import { prompt } from "./prompts";
+import { prompt } from "./prompt";
 
 const main = async () => {
   const res = prompt();
