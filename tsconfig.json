@@ -8,7 +8,8 @@
     "moduleResolution": "node",
     "strict": true,
     "declaration": true,
-    "declarationDir": "dist/type"
+    "declarationDir": "dist/type",
+    "resolveJsonModule": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
