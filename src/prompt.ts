@@ -15,7 +15,7 @@ export type PromptAnsers = {
   author: string;
   type: string;
   typescript: boolean;
-  lint: "eslint" | "prettier"[];
+  lint: ("eslint" | "prettier")[];
 };
 
 export const prompt = async () => {
