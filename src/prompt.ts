@@ -13,7 +13,7 @@ export type PromptAnsers = {
   name: string;
   description: string;
   author: string;
-  type: string;
+  type: ("node" | "browser")[];
   typescript: boolean;
   lint: ("eslint" | "prettier")[];
 };
