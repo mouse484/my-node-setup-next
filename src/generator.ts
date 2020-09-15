@@ -5,6 +5,7 @@ export const generator = ({
   name,
   description,
   author,
+  type,
   typescript,
   lint,
 }: PromptAnsers) => {
@@ -16,10 +17,19 @@ export const generator = ({
 
   if (lint.includes("eslint")) {
     packageGenerator.add("eslint", true);
+
+    if (type.includes("node")) {
+      packageGenerator.add("@mouse_484/eslint-config-node");
+    } else if (type.includes("browser")) {
+      packageGenerator.add("@mouse_484/eslint-config-browser");
+    }
+
     if (lint.includes("prettier")) {
-      packageGenerator
-        .add("eslint-config-prettier", true)
-        .add("eslint-plugin-prettier", true);
+      packageGenerator.add("@mouse_484/eslint-config-prettier");
+    }
+
+    if (typescript) {
+      packageGenerator.add("@mouse_484/eslint-config-typescript");
     }
   }
 
