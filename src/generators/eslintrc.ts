@@ -1,19 +1,19 @@
-import { Generator } from ".";
+import { Generator } from '.';
 
-import { makeFile, formatJson } from "../lib";
+import { makeFile, formatJson } from '../lib';
 
 export class ESLintrc extends Generator {
   rules: string[];
   constructor(dependencies: string[]) {
-    super(".eslintrc.json");
+    super('.eslintrc.json');
 
     console.log(dependencies);
 
     this.rules = dependencies.filter((name) =>
-      name.startsWith("@mouse_484/eslint-config-")
+      name.startsWith('@mouse_484/eslint-config-')
     );
   }
-  make() {
+  make(): void {
     const eslintrc = {
       extends: this.rules,
     };

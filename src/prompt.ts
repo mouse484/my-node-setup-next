@@ -18,7 +18,7 @@ export type PromptAnsers = {
   lint: ("eslint" | "prettier")[];
 };
 
-export const prompt = async () => {
+export const prompt = async (): Promise<PromptAnsers> => {
   const rootPath = process.cwd();
   const defaultProjectName = process.argv[2] || basename(rootPath);
   const { user } = await getGitUserDate();
