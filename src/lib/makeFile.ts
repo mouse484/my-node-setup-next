@@ -1,7 +1,7 @@
-import path from "path";
-import { promises as fs } from "fs";
+import path from 'path';
+import { promises as fs } from 'fs';
 
-export const makeFile = (filename: string, data: string) => {
+export const makeFile = (filename: string, data: string): void => {
   const projectDirectory = process.cwd();
   const filePath = path.join(projectDirectory, filename);
   fs.writeFile(filePath, data);

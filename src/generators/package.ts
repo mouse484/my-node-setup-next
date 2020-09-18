@@ -1,9 +1,9 @@
-import { Generator } from ".";
-import { PromptAnsers } from "../prompt";
-import { makeFile, formatJson } from "../lib";
-import { dependencies as dependenciesList } from "../lib/package.json";
+import { Generator } from '.';
+import { PromptAnsers } from '../prompt';
+import { makeFile, formatJson } from '../lib';
+import { dependencies as dependenciesList } from '../lib/package.json';
 
-export type packageJson = Pick<PromptAnsers, "name" | "description" | "author">;
+export type packageJson = Pick<PromptAnsers, 'name' | 'description' | 'author'>;
 
 export type dependenciesType = keyof typeof dependenciesList;
 
@@ -11,7 +11,7 @@ export class Package extends Generator {
   private dependencies: { [key: string]: string } = {};
   private devDependencies: { [key: string]: string } = {};
   constructor() {
-    super("package.json");
+    super('package.json');
   }
   add(name: dependenciesType, dev?: true): this {
     if (dev) {
@@ -21,7 +21,7 @@ export class Package extends Generator {
     }
     return this;
   }
-  make(data: packageJson) {
+  make(data: packageJson): void {
     const packageData = {
       ...data,
       dependencies: this.dependencies,
@@ -29,7 +29,7 @@ export class Package extends Generator {
     };
     makeFile(this.name, formatJson(packageData));
   }
-  getAllDependencies() {
+  getAllDependencies(): string[] {
     return Object.keys({
       ...this.dependencies,
       ...this.devDependencies,
