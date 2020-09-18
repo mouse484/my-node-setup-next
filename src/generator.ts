@@ -1,5 +1,6 @@
 import { PromptAnsers } from "./prompt";
 import { Package } from "./generators/package";
+import { ESLintrc } from "./generators/eslintrc";
 
 export const generator = ({
   name,
@@ -38,4 +39,8 @@ export const generator = ({
   }
 
   packageGenerator.make({ name, description, author });
+
+  if (lint.includes("eslint")) {
+    new ESLintrc(packageGenerator.getAllDependencies()).make();
+  }
 };

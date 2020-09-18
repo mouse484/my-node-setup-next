@@ -29,4 +29,10 @@ export class Package extends Generator {
     };
     makeFile(this.name, formatJson(packageData));
   }
+  getAllDependencies() {
+    return Object.keys({
+      ...this.dependencies,
+      ...this.devDependencies,
+    });
+  }
 }
