@@ -1,11 +1,11 @@
-import prompts from "prompts";
-import path, { basename } from "path";
-import { homedir } from "os";
-import ini from "ini";
-import { promises as fs } from "fs";
+import prompts from 'prompts';
+import path, { basename } from 'path';
+import { homedir } from 'os';
+import ini from 'ini';
+import { promises as fs } from 'fs';
 
 const getGitUserDate = async () =>
-  ini.parse(await fs.readFile(path.join(homedir(), ".gitconfig"), "utf8")) as {
+  ini.parse(await fs.readFile(path.join(homedir(), '.gitconfig'), 'utf8')) as {
     user: { name?: string };
   };
 
@@ -13,9 +13,9 @@ export type PromptAnsers = {
   name: string;
   description: string;
   author: string;
-  type: ("node" | "browser")[];
+  type: ('node' | 'browser')[];
   typescript: boolean;
-  lint: ("eslint" | "prettier")[];
+  lint: ('eslint' | 'prettier')[];
 };
 
 export const prompt = async (): Promise<PromptAnsers> => {
@@ -25,43 +25,43 @@ export const prompt = async (): Promise<PromptAnsers> => {
 
   const response: PromptAnsers = await prompts([
     {
-      name: "name",
-      message: "Project name.",
-      type: "text",
+      name: 'name',
+      message: 'Project name.',
+      type: 'text',
       initial: defaultProjectName,
     },
     {
-      name: "description",
-      message: "Project description",
-      type: "text",
+      name: 'description',
+      message: 'Project description',
+      type: 'text',
     },
     {
-      name: "author",
-      message: "Author name",
-      type: "text",
+      name: 'author',
+      message: 'Author name',
+      type: 'text',
       initial: user.name,
     },
     {
-      name: "type",
-      message: "Select development type",
-      type: "select",
+      name: 'type',
+      message: 'Select development type',
+      type: 'select',
       choices: [
-        { title: "Node.js", value: "node" },
-        { title: "Browser", value: "browser" },
+        { title: 'Node.js', value: 'node' },
+        { title: 'Browser', value: 'browser' },
       ],
     },
     {
-      name: "typescript",
-      message: "Use TypeScript?",
-      type: "confirm",
+      name: 'typescript',
+      message: 'Use TypeScript?',
+      type: 'confirm',
     },
     {
-      name: "lint",
-      message: "Select Linting tools",
-      type: "multiselect",
+      name: 'lint',
+      message: 'Select Linting tools',
+      type: 'multiselect',
       choices: [
-        { title: "ESLint", value: "eslint" },
-        { title: "Prettier", value: "prettier" },
+        { title: 'ESLint', value: 'eslint' },
+        { title: 'Prettier', value: 'prettier' },
       ],
     },
   ]);

@@ -1,6 +1,6 @@
 import { Generator } from '.';
 import { PromptAnsers } from '../prompt';
-import { makeFile, formatJson } from '../lib';
+import { formatJson } from '../lib';
 import { dependencies as dependenciesList } from '../lib/package.json';
 
 export type packageJson = Pick<PromptAnsers, 'name' | 'description' | 'author'>;
@@ -27,7 +27,7 @@ export class Package extends Generator {
       dependencies: this.dependencies,
       devDependencies: this.devDependencies,
     };
-    makeFile(this.name, formatJson(packageData));
+    this.makeFile(formatJson(packageData));
   }
   getAllDependencies(): string[] {
     return Object.keys({

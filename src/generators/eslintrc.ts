@@ -1,6 +1,6 @@
 import { Generator } from '.';
 
-import { makeFile, formatJson } from '../lib';
+import { formatJson } from '../lib';
 
 export class ESLintrc extends Generator {
   rules: string[];
@@ -17,6 +17,6 @@ export class ESLintrc extends Generator {
     const eslintrc = {
       extends: this.rules,
     };
-    makeFile(this.name, formatJson(eslintrc));
+    this.makeFile(formatJson(eslintrc));
   }
 }
