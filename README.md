@@ -12,10 +12,13 @@ Node.js scaffolding tool
 - [ ] Vue.js/React.js Support
 
 ## Usage
+
 - Coming soon
 
 ## Licence
+
 - MIT
 
 ## Author
+
 - [mouse](https://github.com/mouse484)

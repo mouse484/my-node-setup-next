@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "mkdir -p dev && cd dev && ts-node ../src",
     "lint": "eslint src",
-    "fix": "yarn lint --fix"
+    "fmt": "prettier --write .",
+    "fix": "yarn fmt && yarn lint --fix"
   },
   "dependencies": {
     "ini": "^1.3.5",
