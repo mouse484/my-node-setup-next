@@ -1,7 +1,7 @@
-import { PromptAnsers } from "./prompt";
-import { Package } from "./generators/package";
-import { ESLintrc } from "./generators/eslintrc";
-import { Gitignore } from "./generators/gitignore";
+import { PromptAnsers } from './prompt';
+import { Package } from './generators/package';
+import { ESLintrc } from './generators/eslintrc';
+import { Gitignore } from './generators/gitignore';
 
 export const generator = ({
   name,
@@ -14,34 +14,34 @@ export const generator = ({
   const packageGenerator = new Package();
 
   if (typescript) {
-    packageGenerator.add("typescript", true);
+    packageGenerator.add('typescript', true);
   }
 
-  if (lint.includes("eslint")) {
-    packageGenerator.add("eslint", true);
+  if (lint.includes('eslint')) {
+    packageGenerator.add('eslint', true);
 
-    if (type.includes("node")) {
-      packageGenerator.add("@mouse_484/eslint-config-node");
-    } else if (type.includes("browser")) {
-      packageGenerator.add("@mouse_484/eslint-config-browser");
+    if (type.includes('node')) {
+      packageGenerator.add('@mouse_484/eslint-config-node');
+    } else if (type.includes('browser')) {
+      packageGenerator.add('@mouse_484/eslint-config-browser');
     }
 
-    if (lint.includes("prettier")) {
-      packageGenerator.add("@mouse_484/eslint-config-prettier");
+    if (lint.includes('prettier')) {
+      packageGenerator.add('@mouse_484/eslint-config-prettier');
     }
 
     if (typescript) {
-      packageGenerator.add("@mouse_484/eslint-config-typescript");
+      packageGenerator.add('@mouse_484/eslint-config-typescript');
     }
   }
 
-  if (lint.includes("prettier")) {
-    packageGenerator.add("prettier", true);
+  if (lint.includes('prettier')) {
+    packageGenerator.add('prettier', true);
   }
 
   packageGenerator.make({ name, description, author });
 
-  if (lint.includes("eslint")) {
+  if (lint.includes('eslint')) {
     new ESLintrc(packageGenerator.getAllDependencies()).make();
   }
 
