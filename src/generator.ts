@@ -1,7 +1,5 @@
 import { PromptAnsers } from './prompt';
-import { Package } from './generators/package';
-import { ESLintrc } from './generators/eslintrc';
-import { Gitignore } from './generators/gitignore';
+import { Package, ESLintrc, Gitignore } from './generators';
 
 export const generator = ({
   name,

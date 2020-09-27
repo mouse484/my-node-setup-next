@@ -1,9 +1,5 @@
-import { makeFile } from '../lib';
+export * from './Base';
 
-export abstract class Generator {
-  constructor(public name: string) {}
-  abstract make(data: unknown): void;
-  makeFile(data: string): void {
-    makeFile(this.name, data);
-  }
-}
+export * from './package';
+export * from './gitignore';
+export * from './eslintrc';
