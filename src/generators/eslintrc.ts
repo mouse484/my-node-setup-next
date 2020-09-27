@@ -7,8 +7,6 @@ export class ESLintrc extends Generator {
   constructor(dependencies: string[]) {
     super('.eslintrc.json');
 
-    console.log(dependencies);
-
     this.rules = dependencies.filter((name) =>
       name.startsWith('@mouse_484/eslint-config-')
     );
