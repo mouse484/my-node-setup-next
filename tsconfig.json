@@ -1,16 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
     "target": "es2019",
     "module": "commonjs",
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "strict": true,
     "declaration": true,
-    "declarationDir": "dist/type",
-    "resolveJsonModule": true
+    "outDir": "./dist",
+    "declarationDir": "dist/type"
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts"]
 }
