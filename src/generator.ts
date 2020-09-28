@@ -1,5 +1,5 @@
 import { PromptAnsers } from './prompt';
-import { Package, ESLintrc, Gitignore } from './generators';
+import { Package, ESLintrc, Gitignore, TSConfig } from './generators';
 
 export const generator = ({
   name,
@@ -44,4 +44,5 @@ export const generator = ({
   }
 
   new Gitignore().make();
+  new TSConfig().make({ isNode: type.includes('node') });
 };
