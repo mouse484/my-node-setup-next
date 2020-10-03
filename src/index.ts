@@ -3,8 +3,8 @@ import { generator } from './generator';
 
 const main = async () => {
   const promptAnswers = await prompt();
-
+  
   generator(promptAnswers);
 };
 
-export = main;
+main();
