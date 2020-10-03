@@ -13,7 +13,7 @@ Node.js scaffolding tool
 
 ## Usage
 
-- Coming soon
+- `npx github:mouse484/my-node-setup-next`
 
 ## Licence
 
