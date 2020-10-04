@@ -26,6 +26,6 @@
     "@mouse_484/eslint-config-node": "https://eslint-config.mouse484.tk/Node?next",
     "@mouse_484/eslint-config-prettier": "https://eslint-config.mouse484.tk/Prettier?next",
     "@mouse_484/eslint-config-typescript": "https://eslint-config.mouse484.tk/TypeScript?next",
-    "eslint": "^7.9.0"
+    "eslint": "^7.10.0"
   }
 }
