@@ -43,6 +43,9 @@ export const generator = ({
     new ESLintrc(packageGenerator.getAllDependencies()).make();
   }
 
+  if (typescript) {
+    new TSConfig().make({ isNode: type.includes('node') });
+  }
+
   new Gitignore().make();
-  new TSConfig().make({ isNode: type.includes('node') });
 };
