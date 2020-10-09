@@ -13,7 +13,8 @@ Node.js scaffolding tool
 
 ## Usage
 
-- `npx github:mouse484/my-node-setup-next`
+- `npx -p ts-node -p github:mouse484/my-node-setup-next -c my-node-setup-next`
+- `yarn add github:mouse484/my-node-setup-next && yarn run my-node-setup-next`
 
 ## Licence
 
