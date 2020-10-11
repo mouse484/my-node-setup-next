@@ -29,6 +29,7 @@ export const prompt = async (): Promise<PromptAnsers> => {
       message: 'Project name.',
       type: 'text',
       initial: defaultProjectName,
+      format: (val: string) => val.toLowerCase(),
     },
     {
       name: 'description',
