@@ -23,17 +23,17 @@ export const generator = ({
     packageGenerator.add('eslint', true);
 
     if (type.includes('node')) {
-      packageGenerator.add('@mouse_484/eslint-config-node');
+      packageGenerator.add('@mouse_484/eslint-config-node', true);
     } else if (type.includes('browser')) {
-      packageGenerator.add('@mouse_484/eslint-config-browser');
+      packageGenerator.add('@mouse_484/eslint-config-browser', true);
     }
 
     if (lint.includes('prettier')) {
-      packageGenerator.add('@mouse_484/eslint-config-prettier');
+      packageGenerator.add('@mouse_484/eslint-config-prettier', true);
     }
 
     if (typescript) {
-      packageGenerator.add('@mouse_484/eslint-config-typescript');
+      packageGenerator.add('@mouse_484/eslint-config-typescript', true);
     }
   }
 
