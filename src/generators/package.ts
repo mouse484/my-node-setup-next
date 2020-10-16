@@ -2,6 +2,7 @@ import { Generator } from '.';
 import { PromptAnsers } from '../prompt';
 import { formatJson } from '../lib';
 import { dependencies as dependenciesList } from '../lib/package.json';
+import sortPackageJson from 'sort-package-json';
 
 export type packageJson = Pick<PromptAnsers, 'name' | 'description' | 'author'>;
 
@@ -22,12 +23,12 @@ export class Package extends Generator {
     return this;
   }
   make(data: packageJson): void {
-    const packageData = {
+    const packageData = formatJson({
       ...data,
       dependencies: this.dependencies,
       devDependencies: this.devDependencies,
-    };
-    this.makeFile(formatJson(packageData));
+    });
+    this.makeFile(sortPackageJson(packageData));
   }
   getAllDependencies(): string[] {
     return Object.keys({
