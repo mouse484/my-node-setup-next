@@ -13,6 +13,10 @@ export const generator = ({
 
   if (typescript) {
     packageGenerator.add('typescript', true);
+
+    if (type.includes('node')) {
+      packageGenerator.add('@types/node', true);
+    }
   }
 
   if (lint.includes('eslint')) {
