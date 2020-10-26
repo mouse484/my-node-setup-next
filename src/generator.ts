@@ -10,9 +10,12 @@ export const generator = ({
   lint,
 }: PromptAnsers): void => {
   const packageGenerator = new Package();
+  const gitignoreGenerator = new Gitignore();
 
   if (typescript) {
     packageGenerator.add('typescript', true);
+
+    gitignoreGenerator.add('dist/');
 
     if (type.includes('node')) {
       packageGenerator.add('@types/node', true);
@@ -51,5 +54,5 @@ export const generator = ({
     new TSConfig().make({ isNode: type.includes('node') });
   }
 
-  new Gitignore().make();
+  gitignoreGenerator.make();
 };

@@ -5,6 +5,9 @@ export class Gitignore extends Generator {
   constructor() {
     super('.gitignore');
   }
+  add(pattern: string): void {
+    this.ignorePatterns.push(pattern);
+  }
   make(): void {
     this.makeFile(this.ignorePatterns.join('\n'));
   }
