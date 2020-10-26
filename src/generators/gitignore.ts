@@ -1,5 +1,4 @@
 import { Generator } from '.';
-import { formatJson } from '../lib';
 
 export class Gitignore extends Generator {
   ignorePatterns = ['node_modules/'];
