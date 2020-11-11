@@ -43,23 +43,26 @@
   version "0.0.0"
   resolved "https://eslint-config.mouse484.tk/Base?next#da8542d6d87e138f30ceeab83444ebc54776b319"
 
-"@mouse_484/eslint-config-node@https://eslint-config.mouse484.tk/Node?next":
+"@mouse_484/eslint-config-node@https://eslint-config.mouse484.vercel.app/Node?next":
   version "0.0.0"
-  resolved "https://eslint-config.mouse484.tk/Node?next#063d7688d56c00171e5f7856cfa7eae0259405be"
+  uid "063d7688d56c00171e5f7856cfa7eae0259405be"
+  resolved "https://eslint-config.mouse484.vercel.app/Node?next#063d7688d56c00171e5f7856cfa7eae0259405be"
   dependencies:
     "@mouse_484/eslint-config-base" "https://eslint-config.mouse484.tk/Base?next"
 
-"@mouse_484/eslint-config-prettier@https://eslint-config.mouse484.tk/Prettier?next":
+"@mouse_484/eslint-config-prettier@https://eslint-config.mouse484.vercel.app/Prettier?next":
   version "0.0.0"
-  resolved "https://eslint-config.mouse484.tk/Prettier?next#54801df4172c2b8e44e82dadb1493e24f78431b0"
+  uid "54801df4172c2b8e44e82dadb1493e24f78431b0"
+  resolved "https://eslint-config.mouse484.vercel.app/Prettier?next#54801df4172c2b8e44e82dadb1493e24f78431b0"
   dependencies:
     eslint-config-prettier "^6.11.0"
     eslint-plugin-prettier "^3.1.4"
     prettier "^2.1.1"
 
-"@mouse_484/eslint-config-typescript@https://eslint-config.mouse484.tk/TypeScript?next":
+"@mouse_484/eslint-config-typescript@https://eslint-config.mouse484.vercel.app/TypeScript?next":
   version "0.0.0"
-  resolved "https://eslint-config.mouse484.tk/TypeScript?next#503908c957b0362cc034c0f438da3850cf0d81cc"
+  uid "503908c957b0362cc034c0f438da3850cf0d81cc"
+  resolved "https://eslint-config.mouse484.vercel.app/TypeScript?next#503908c957b0362cc034c0f438da3850cf0d81cc"
   dependencies:
     "@mouse_484/eslint-config-base" "https://eslint-config.mouse484.tk/Base?next"
     "@typescript-eslint/eslint-plugin" "^3.10.1"
@@ -1112,10 +1115,10 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
-typescript@^4.0.2:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.3.tgz#153bbd468ef07725c1df9c77e8b453f8d36abba5"
-  integrity sha512-tEu6DGxGgRJPb/mVPIZ48e69xCn2yRmCgYmDugAVwmJ6o+0u1RI18eO7E7WBTLYLaEVVOhwQmcdhQHweux/WPg==
+typescript@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.5.tgz#ae9dddfd1069f1cb5beb3ef3b2170dd7c1332389"
+  integrity sha512-ywmr/VrTVCmNTJ6iV2LwIrfG1P+lv6luD8sUJs+2eI9NLGigaN+nUQc13iHqisq7bra9lnmUSYqbJvegraBOPQ==
 
 uri-js@^4.2.2:
   version "4.4.0"
