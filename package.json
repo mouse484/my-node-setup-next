@@ -27,6 +27,6 @@
     "@mouse_484/eslint-config-node": "https://eslint-config.mouse484.vercel.app/Node?next",
     "@mouse_484/eslint-config-prettier": "https://eslint-config.mouse484.vercel.app/Prettier?next",
     "@mouse_484/eslint-config-typescript": "https://eslint-config.mouse484.vercel.app/TypeScript?next",
-    "eslint": "^7.11.0"
+    "eslint": "^7.13.0"
   }
 }
