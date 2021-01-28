@@ -6,7 +6,7 @@
   "author": "mouse_484 <escmouse484@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "mkdir -p dev && cd dev && ts-node --project ../tsconfig.json ../src/index",
+    "dev": "rm -rf dev && mkdir -p dev && cd dev && ts-node --project ../tsconfig.json ../src/index",
     "lint": "eslint src",
     "fmt": "prettier --write .",
     "fix": "yarn fmt && yarn lint --fix"
