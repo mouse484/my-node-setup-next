@@ -1,14 +1,20 @@
 import { PromptAnsers } from './prompt';
+import { create } from './lib/create';
 import { Package, ESLintrc, Gitignore, TSConfig } from './generators';
 
-export const generator = ({
+export const generator = async ({
   name,
   description,
   author,
+  creator,
   type,
   typescript,
   lint,
-}: PromptAnsers): void => {
+}: PromptAnsers): Promise<void> => {
+  if (creator && creator !== 'none') {
+    await create(creator);
+  }
+
   const packageGenerator = new Package();
   const gitignoreGenerator = new Gitignore();
 

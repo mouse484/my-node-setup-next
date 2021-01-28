@@ -16,6 +16,7 @@ export type PromptAnsers = {
   type: ('node' | 'browser')[];
   typescript: boolean;
   lint: ('eslint' | 'prettier')[];
+  creator: 'next' | 'none';
 };
 
 export const prompt = async (): Promise<PromptAnsers> => {
@@ -41,6 +42,15 @@ export const prompt = async (): Promise<PromptAnsers> => {
       message: 'Author name',
       type: 'text',
       initial: user.name,
+    },
+    {
+      name: 'creator',
+      message: 'create-foo-bar',
+      type: 'select',
+      choices: [
+        { title: 'create-next-app', value: 'next' },
+        { title: 'none', value: 'none' },
+      ],
     },
     {
       name: 'type',
