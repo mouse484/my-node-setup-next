@@ -48,8 +48,8 @@ export const prompt = async (): Promise<PromptAnsers> => {
       message: 'create-foo-bar',
       type: 'select',
       choices: [
-        { title: 'create-next-app', value: 'next' },
         { title: 'none', value: 'none' },
+        { title: 'create-next-app', value: 'next' },
       ],
     },
     {
