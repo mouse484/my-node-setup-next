@@ -18,13 +18,15 @@ export const generator = ({
     gitignoreGenerator.add('dist/');
 
     if (type.includes('node')) {
-      packageGenerator.add('ts-node');
-      packageGenerator.add('@types/node', true);
+      packageGenerator
+        .add('ts-node')
+        .add('@types/node', true)
+        .addScript('dev', 'ts-node src');
     }
   }
 
   if (lint.includes('eslint')) {
-    packageGenerator.add('eslint', true);
+    packageGenerator.add('eslint', true).addScript('lint', 'eslint src');
 
     if (type.includes('node')) {
       packageGenerator.add('@mouse_484/eslint-config-node', true);
@@ -33,7 +35,9 @@ export const generator = ({
     }
 
     if (lint.includes('prettier')) {
-      packageGenerator.add('@mouse_484/eslint-config-prettier', true);
+      packageGenerator
+        .add('@mouse_484/eslint-config-prettier', true)
+        .addScript('fix', 'yarn fmt && yarn lint --fix');
     }
 
     if (typescript) {
@@ -42,7 +46,9 @@ export const generator = ({
   }
 
   if (lint.includes('prettier')) {
-    packageGenerator.add('prettier', true);
+    packageGenerator
+      .add('prettier', true)
+      .addScript('fmt', 'prettier --write .');
   }
 
   packageGenerator.make({ name, description, author });
