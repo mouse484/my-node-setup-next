@@ -11,6 +11,7 @@ export type dependenciesType = keyof typeof dependenciesList;
 export class Package extends Generator {
   private dependencies: { [key: string]: string } = {};
   private devDependencies: { [key: string]: string } = {};
+  private scripts: { [key: string]: string } = {};
   constructor() {
     super('package.json');
   }
@@ -22,9 +23,14 @@ export class Package extends Generator {
     }
     return this;
   }
+  addScript(name: string, script: string): this {
+    this.scripts[name] = script;
+    return this;
+  }
   make(data: packageJson): void {
     const packageData = formatJson({
       ...data,
+      scripts: this.scripts,
       dependencies: this.dependencies,
       devDependencies: this.devDependencies,
     });
