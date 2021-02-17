@@ -18,6 +18,7 @@ export const generator = ({
     gitignoreGenerator.add('dist/');
 
     if (type.includes('node')) {
+      packageGenerator.add('ts-node');
       packageGenerator.add('@types/node', true);
     }
   }
