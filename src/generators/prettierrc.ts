@@ -1,0 +1,24 @@
+import { Generator, formatJson } from '.';
+
+export class Prettierrc extends Generator {
+  constructor() {
+    super('.prettierrc');
+  }
+  make(): void {
+    this.makeFile(
+      formatJson({
+        printWidth: 80,
+        tabWidth: 2,
+        useTabs: false,
+        semi: true,
+        singleQuote: true,
+        quoteProps: 'as-needed',
+        trailingComma: 'es5',
+        bracketSpacing: true,
+        arrowParens: 'always',
+        vueIndentScriptAndStyle: true,
+        endOfLine: 'lf',
+      })
+    );
+  }
+}

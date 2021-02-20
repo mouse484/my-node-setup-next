@@ -1,5 +1,11 @@
 import { PromptAnsers } from './prompt';
-import { Package, ESLintrc, Gitignore, TSConfig } from './generators';
+import {
+  Package,
+  ESLintrc,
+  Gitignore,
+  TSConfig,
+  Prettierrc,
+} from './generators';
 
 export const generator = ({
   name,
@@ -45,16 +51,17 @@ export const generator = ({
     }
   }
 
-  if (lint.includes('prettier')) {
-    packageGenerator
-      .add('prettier', true)
-      .addScript('fmt', 'prettier --write .');
-  }
-
   packageGenerator.make({ name, description, author });
 
   if (lint.includes('eslint')) {
     new ESLintrc(packageGenerator.getAllDependencies()).make();
+  }
+
+  if (lint.includes('prettier')) {
+    packageGenerator
+      .add('prettier', true)
+      .addScript('fmt', 'prettier --write .');
+    new Prettierrc().make();
   }
 
   if (typescript) {
