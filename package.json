@@ -21,7 +21,7 @@
     "prompts": "^2.4.0",
     "sort-package-json": "^1.48.1",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.3"
+    "typescript": "^4.2.3"
   },
   "devDependencies": {
     "@mouse_484/eslint-config-node": "https://eslint-config.mouse484.vercel.app/Node?next",
