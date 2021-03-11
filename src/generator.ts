@@ -51,17 +51,17 @@ export const generator = ({
     }
   }
 
-  packageGenerator.make({ name, description, author });
-
-  if (lint.includes('eslint')) {
-    new ESLintrc(packageGenerator.getAllDependencies()).make();
-  }
-
   if (lint.includes('prettier')) {
     packageGenerator
       .add('prettier', true)
       .addScript('fmt', 'prettier --write .');
     new Prettierrc().make();
+  }
+
+  packageGenerator.make({ name, description, author });
+
+  if (lint.includes('eslint')) {
+    new ESLintrc(packageGenerator.getAllDependencies()).make();
   }
 
   if (typescript) {
