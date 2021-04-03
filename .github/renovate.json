@@ -1,5 +1,14 @@
 {
   "extends": [
     "config:base"
+  ],
+  "packageRules": [
+    {
+      "matchFiles": [
+        "src/lib/package.json"
+      ],
+      "groupName": "lib dependency",
+      "automerge": true
+    }
   ]
 }
