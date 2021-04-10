@@ -16,6 +16,7 @@
     "@types/node": "14.14.28",
     "@types/prettier": "2.2.1",
     "@types/prompts": "2.0.9",
+    "edit-config": "^1.8.0",
     "ini": "2.0.0",
     "prettier": "2.2.1",
     "prompts": "2.4.0",
