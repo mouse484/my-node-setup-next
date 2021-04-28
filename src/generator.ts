@@ -25,7 +25,7 @@ export const generator = ({
 
     if (type.includes('node')) {
       packageGenerator
-        .add('ts-node')
+        .add('ts-node', true)
         .add('@types/node', true)
         .addScript('dev', 'ts-node src');
     }
