@@ -5,7 +5,7 @@
     "@mouse_484/eslint-config-node": "https://eslint-config.mouse484.tk/Node?next",
     "@mouse_484/eslint-config-prettier": "https://eslint-config.mouse484.tk/Prettier?next",
     "@mouse_484/eslint-config-typescript": "https://eslint-config.mouse484.tk/TypeScript?next",
-    "@types/node": "14.17.15",
+    "@types/node": "14.17.16",
     "eslint": "7.32.0",
     "prettier": "2.4.0",
     "ts-node": "10.2.1",
