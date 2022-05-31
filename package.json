@@ -1,5 +1,5 @@
 {
-  "name": "my-node-setup-main",
+  "name": "my-node-setup-next",
   "version": "0.0.0",
   "bin": "./src/index.ts",
   "repository": "https://github.com/mouse484/my-node-setup-main.git",
