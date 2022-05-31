@@ -1,10 +1,10 @@
 {
   "private": "true",
   "dependencies": {
-    "@mouse_484/eslint-config-browser": "https://eslint-config.mouse484.tk/Browser?next",
-    "@mouse_484/eslint-config-node": "https://eslint-config.mouse484.tk/Node?next",
-    "@mouse_484/eslint-config-prettier": "https://eslint-config.mouse484.tk/Prettier?next",
-    "@mouse_484/eslint-config-typescript": "https://eslint-config.mouse484.tk/TypeScript?next",
+    "@mouse_484/eslint-config-browser": "https://eslint-config.mouse484.vercel.app/Browser?main",
+    "@mouse_484/eslint-config-node": "https://eslint-config.mouse484.vercel.app/Node?main",
+    "@mouse_484/eslint-config-prettier": "https://eslint-config.mouse484.vercel.app/Prettier?main",
+    "@mouse_484/eslint-config-typescript": "https://eslint-config.mouse484.vercel.app/TypeScript?main",
     "@types/node": "16.11.36",
     "eslint": "8.16.0",
     "prettier": "2.6.2",
